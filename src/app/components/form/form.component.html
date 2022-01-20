@@ -1,0 +1,75 @@
+<!--/* <form class="form">
+  <p class="form__title">Buscar endereço</p>
+
+  <div class="form__label-float">
+    <input class="label-float__input" type="text" placeholder=" " />
+    <label>Digite seu Nome</label>
+  </div>
+
+  <div class="form__label-float">
+    <input class="label-float__input" type="number" placeholder=" " />
+    <label>Digite seu CPF</label>
+  </div>
+
+  <div class="form__label-float">
+    <input class="label-float__input" type="email" placeholder=" " />
+    <label>Digite seu E-mail</label>
+  </div>
+
+  <div class="form__label-float">
+    <input class="label-float__input" type="number" placeholder=" " />
+    <label>Digite o CEP</label>
+  </div>
+  <button class="form__button">BUSCAR</button>
+</form> */-->
+
+<form class="row form" [formGroup]="myVarThatIsOnTheComponent">
+  <p class="form__title">Buscar endereço</p>
+  <div class="form-group has-float-label col-md-10">
+    <input
+      class="form-control"
+      id="first"
+      type="text"
+      placeholder=" "
+      required="true"
+      formControlName="firstName"
+    />
+    <label for="first">Digite seu Nome</label>
+  </div>
+
+  <div class="form-group has-float-label col-md-10">
+    <input
+      class="form-control"
+      type="number"
+      placeholder=" "
+      formControlName="cpf"
+    />
+    <label>Digite seu CPF</label>
+  </div>
+
+  <div class="form-group has-float-label col-md-10">
+    <input
+      class="form-control"
+      type="email"
+      id="email"
+      placeholder=" "
+      formControlName="email"
+    />
+    <label for="email"> Email </label>
+  </div>
+
+  <div class="form-group has-float-label col-md-10">
+    <input
+      class="form-control"
+      id="password"
+      type="number"
+      placeholder=" "
+      formControlName="cep"
+    />
+    <label for="password">Digite seu CEP</label>
+  </div>
+
+  <div class="col-md-2 float-right">
+    <button class="btn btn-block btnNtt" (click)="jorginhoPrintaPraMim()">BUSCAR</button>
+  </div>
+</form>
