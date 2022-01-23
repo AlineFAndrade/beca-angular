@@ -72,4 +72,8 @@
   <div class="col-md-2 float-right">
     <button class="btn btn-block btnNtt" (click)="jorginhoPrintaPraMim()">BUSCAR</button>
   </div>
+
+  <div *ngIf="cep.cep">
+    {{cep | json}}
+  </div>
 </form>
