@@ -1,79 +1,64 @@
-<!--/* <form class="form">
-  <p class="form__title">Buscar endereço</p>
-
-  <div class="form__label-float">
-    <input class="label-float__input" type="text" placeholder=" " />
-    <label>Digite seu Nome</label>
-  </div>
-
-  <div class="form__label-float">
-    <input class="label-float__input" type="number" placeholder=" " />
-    <label>Digite seu CPF</label>
-  </div>
-
-  <div class="form__label-float">
-    <input class="label-float__input" type="email" placeholder=" " />
-    <label>Digite seu E-mail</label>
-  </div>
-
-  <div class="form__label-float">
-    <input class="label-float__input" type="number" placeholder=" " />
-    <label>Digite o CEP</label>
-  </div>
-  <button class="form__button">BUSCAR</button>
-</form> */-->
-
 <form class="row form" [formGroup]="myVarThatIsOnTheComponent">
   <p class="form__title">Buscar endereço</p>
-  <div class="form-group has-float-label col-md-10">
+  <div class="divInput form-group has-float-label col-md-10">
     <input
-      class="form-control"
+      class="form-control input"
       id="first"
       type="text"
       placeholder=" "
       required="true"
       formControlName="firstName"
     />
-    <label for="first">Digite seu Nome</label>
+    <label class="label" for="first">Digite seu Nome</label>
   </div>
 
-  <div class="form-group has-float-label col-md-10">
+  <div class="divInput form-group has-float-label col-md-10">
     <input
-      class="form-control"
+      class="form-control input"
       type="number"
       placeholder=" "
       formControlName="cpf"
     />
-    <label>Digite seu CPF</label>
+    <label class="label">Digite seu CPF</label>
   </div>
 
-  <div class="form-group has-float-label col-md-10">
+  <div class="divInput form-group has-float-label col-md-10">
     <input
-      class="form-control"
+      class="form-control input"
       type="email"
       id="email"
       placeholder=" "
       formControlName="email"
     />
-    <label for="email"> Email </label>
+    <label class="label" for="email">Digite seu e-mail </label>
   </div>
 
-  <div class="form-group has-float-label col-md-10">
+  <div class="divInput form-group has-float-label col-md-10">
     <input
-      class="form-control"
+      class="form-control input"
       id="password"
-      type="number"
+      type="text"
       placeholder=" "
       formControlName="cep"
     />
-    <label for="password">Digite seu CEP</label>
+    <label class="label" for="password">Digite seu cep</label>
   </div>
 
-  <div class="col-md-2 float-right">
-    <button class="btn btn-block btnNtt" (click)="jorginhoPrintaPraMim()">BUSCAR</button>
+  <div class="divBtn col-md-2">
+    <button class="btn btn-block btnNtt" (click)="jorginhoPrintaPraMim()">
+      BUSCAR
+    </button>
   </div>
 
-  <div *ngIf="cep.cep">
-    {{cep | json}}
+  <div class="hiddenDiv">
+    <div class="formResult" *ngIf="cep.cep">
+      <img class="imgVector" src="./../assets/Vector1.png" />
+      <div class="result">
+        {{ cep.logradouro }}
+        {{ cep.complemento }}
+        {{ cep.bairro }}
+        <p>CEP: {{ cep.cep }}</p> 
+      </div>
+    </div>
   </div>
 </form>

@@ -10,83 +10,59 @@ $blueNtt: #6785c1
     flex-direction: column
     align-items: flex-start
     position: relative
+    .form__title
+        // padding: 0 10%
+        font-size: 20px
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
+        font-style: normal
+        line-height: 40px
+        font-weight: 700
+        color: $leadGray
 
-    form-group input-group
-    margin: 0
-.form__title
-    font-size: 20px
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
-    font-style: normal
-    line-height: 40px
-    font-weight: 700
-    color: $leadGray
+    .divInput
+        padding: 0
 
-.btnNtt
-    background-color: $blueNtt
-    color: $white
+        .input
+            border: 1px solid $blueNtt
+            padding: 0
+            color: $leadGray
+            &:focus
+                border: 3px solid $blueNtt
+            ::placeholder
+                opacity: 100%
+        .label
+            font-size: 20px
+            color: $leadGray
+            &:focus
+                color: $leadGray
 
-//.ng-invalid
-//    border-color: red
-// .form__label-float
-//     position: relative
-//     padding-top: 13px
+    .divBtn
+        padding: 0
+        margin: 0
 
-// .form__label-float input:focus
-//     border: 2px solid $mediumGray
-
-//   __label-float input::placeholder
-//     color: transparent
-
-//   __label-float label
-//     font-family: "Roboto", sans-serif
-//     font-weight: 500
-//     font-size: 14px
-//     color: $mediumGray
-//     pointer-events: none
-//     position: absolute
-//     top: calc(50% - 8px)
-//     left: 15px
-//     transition: all 0.1s linear
-//     -webkit-transition: all 0.1s linear
-//     -moz-transition: all 0.1s linear
-//     background-color: $white
-//     padding: 5px
-//     box-sizing: border-box
-
-//   &:focus
-//       __label-float input:focus + label,
-
-//   &__label-float input:not(:placeholder-shown) + label
-//     font-size: 13px
-//     top: 0
-//     color: $mediumGray
-
-//     __input 
-//       position: relative
-//       padding-top: 13px
-//       margin-bottom: 0.2em
-//       font-family: "Roboto", sans-serif
-//       font-weight: 500
-//       font-size: 14px
-//       color: $mediumGray
-//       background: $white
-//       border: 1px solid
-//       box-sizing: border-box
-//       border-radius: 5px
-//       width: 963px
-//       height: 50px
-//       left: 0px
-//       top: 20px
-//       margin-bottom: 10px
-
-//   __button
-//     margin-top: 3%
-//     margin-right: 10%
-//     padding: 1% 4%
-//     border-radius: 5px
-//     align-self: flex-end
-//     background-color: $blueNtt
-//     color: $white
-    // input
-    //     width: 90%
-    //     margin-bottom: 10px
+        .btnNtt
+            background-color: $blueNtt
+            color: $white
+            position: relative
+            margin-left: auto
+            padding: 10px 30px
+            width: 100%
+    .hiddenDiv
+        width: 100%
+        height: 30%
+        text-align: center    
+        .formResult
+            margin-top: 5% 
+            width: 100%
+            
+            .imgVector
+                padding: 2% 0 0 2%
+                display: inline
+                // float: left
+                width: 8%
+                height: 9%
+            .result
+                display: inline
+                color: $leadGray
+                margin: 0 5%
+                padding: 0 10% 0 0

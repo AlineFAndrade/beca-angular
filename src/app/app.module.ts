@@ -11,6 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { NotFoundComponent } from './core/components/not-found/not-found.component';
 import { NavBarComponent } from './core/components/nav-bar/nav-bar.component';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,62 +1,42 @@
 $white: white
 $bluentt: #6785c1
 
-footer 
-  display: flex
-  flex-direction: row
-  justify-content: center
-  align-items: center
-  padding: 0px
+.footer
+  display: inline
+  padding: 0px 30px
   position: absolute
-  width: 1512px
-  height: 69px
-  left: 0px
-  top: 913px
+  width: 100%
+  height: 12%
+  margin-top: 10%
   background: $bluentt
 
-  __footerContent 
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    align-items: center
-    padding: 0px 30px
-    width: 1024px
-    height: 25px
-    left: 244px
-    top: 47px
-    background: $bluentt
+  .footerContent
+    color: $white
+    width: 100%
+    display: inline
+    // padding-top: 10%
 
-      __copyright :
-        width: 200px
+    .footerContent__copyright
+      display: inline
+      justify-content: space-evenly
+      font-family: "Roboto", sans-serif
+      font-style: normal
+      font-weight: 600
+      font-size: 100%
+      padding-left: 10%
+
+    .footerContent__socialMedias 
+      // border: 2px solid $white
+      display: inline
+      justify-content: space-evenly
+      padding-left: 35%
+      margin-left: 10%
+      // width: 10%
+    //   height: 31px
+
+      .footerContent__logoSocialFB :
+        width: 24px
         height: 24px
-        left: 30px
-        top: 0.5px
-        font-family: "Roboto", sans-serif
-        font-style: normal
-        font-weight: 500
-        font-size: 10px
-        line-height: 24px
-        color: $white
-
-      __socialMedias :
-        width: 100px
-        height: 31px
-        left: 931px
-        top: -3px
-        mix-blend-mode: normal
-
-          __logoSocialFB :
-            width: 24px
-            height: 24px
-            left: 0%
-            right: 69.39%
-            top: 16.67%
-            bottom: 20.83%
-            text-decoration: none
-            margin-right: 1%
-
-          __logoSocialYT :
-            width: 24px
-            height: 24px
-            right: 0px
-            bottom: 4px
+      .footerContent__logoSocialYT :
+        width: 24px
+        height: 24px

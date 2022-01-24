@@ -26,7 +26,11 @@ export class FormComponent {
   jorginhoPrintaPraMim() {
     if (this.myVarThatIsOnTheComponent.valid) {
       console.log(this.myVarThatIsOnTheComponent.value)
-      this.cep = this.cepService.searchCEP(this.myVarThatIsOnTheComponent.value.cep);
+      this.cepService.searchCEP(this.myVarThatIsOnTheComponent.value.cep).subscribe(
+        (data: CEP) => {
+          this.cep = data;
+        }
+      );
       console.log(this.cep)
     } else {
       alert('Jorginho disse que não vai printar.')
